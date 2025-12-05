@@ -1,0 +1,310 @@
+/* :root {
+  --lime-green: #c2c833;
+  --lime-green-darker: #c2c833;
+  --light-gray: rgb(200, 200, 200);
+  --light-gray-lighter: rgb(250, 250, 250);
+} */
+:root {
+  --lime-green: #c8d836;
+  --lime-green-darker: #bacc1d;
+  /* --lime-green-darker: #b5c804; */
+  --light-gray: rgb(200, 200, 200);
+  --light-gray-lighter: rgb(248, 248, 248);
+}
+
+
+*{
+    margin: 0;  
+    font-family: sen, sans-serif;
+
+}
+
+body {
+    font-size: 15px;
+    color: black;
+    letter-spacing: 0.05em;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 960px;
+    justify-self: center;
+}
+
+.green{
+    color: var(--lime-green-darker);
+}
+
+/* h2.green{
+    color: var(--lime-green);
+} */
+
+.text-green{
+    color: var(--lime-green-darker);
+}
+
+.white{
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.green-line {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: var(--lime-green);
+}
+
+.on-top {
+    position: sticky;
+    top: 0px;
+    z-index: 1001;
+}
+
+.on-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.divider-50 {
+    margin-top: 50px;
+}
+
+.divider-30 {
+    margin-top: 30px;
+}
+
+.divider-15 {
+    margin-top: 15px;
+}
+
+
+
+.padding-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.divider-10 {
+    margin-top: 10px;
+}
+
+.column-300 {
+    margin-left: 300px;
+    width: 100%;
+    max-width: 660px;
+}
+
+.column-100 {
+    margin-left: 100px
+}
+
+.column-400 {
+    margin-left: 400px;
+}
+
+.text-16-bold {
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+}
+
+.text-12-bold {
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+}
+
+.text-12 {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+}
+
+.navbar-btns{
+    padding-left: 50px;
+}
+.navbar .like-button {
+    background-color: var(--lime-green);
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    border-radius: 3px;
+    border:none;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.navbar .like-button:hover {
+    background-color: var(--light-gray);
+    color: white;
+    cursor: pointer;
+}
+
+.white-hover:hover {
+    background-color: var(--light-gray);
+    color: white;
+    cursor: pointer;
+}
+
+.navbar {
+    max-width: 960px;
+    width: 100%;
+    position: sticky;
+    top:3px;
+    background-color: white;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, a:active {
+    color: var(--light-gray);
+}
+
+h2 {
+    font-size: 48px;
+    color: var(--lime-green);
+}
+
+h3 {
+    font-size: 36px;
+    color: var(--lime-green);
+}
+
+h4 {
+    font-size: 18px;
+    color: var(--lime-green);
+
+}
+
+.contact {
+    height: 200px;
+    position: relative;
+}
+
+.contact img{
+    height: 100%;
+    position: absolute;
+    /* border-radius: 50%; */
+    /* border: 1px var(--lime-green) solid; */
+    background-color: var(--light-gray-lighter);
+}
+
+#contact {
+	border-top: 150px solid transparent;
+	margin-top: -150px;
+	/* padding: 15px;  */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+#summary {
+	border-top: 100px solid transparent;
+	margin-top: -100px;
+	/* padding: 15px;  */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.column {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.last-column {
+    width: 100%;   
+}
+
+#skills {
+	border-top: 100px solid transparent;
+	margin-top: -100px;
+	/* padding: 15px;  */
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.languages {
+    width: 200px;
+
+}
+
+.languages-column {
+    min-width: 400px;
+}
+
+.education {
+    justify-content: left;
+}
+
+.width-100 {
+    width:100px;
+}
+
+.width-300 {
+    max-width:300px;
+}
+
+
+@media (max-width: 1000px) {
+    .container {
+      padding: 0 20px;
+    }
+}
+  
+.background {
+    z-index: -1;
+    position: absolute;
+    font-size: 190px;
+    font-weight: 800;
+    color: var(--light-gray-lighter);
+    min-width: 100%;
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.position-relative {
+    position: relative;
+}

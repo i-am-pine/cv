@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript mini projects</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.png">
+    <link rel="stylesheet" href="js-tabs.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+    </style>
+</head>
+<body>
+    <div class="green-line on-top"></div>
+    <div class="container flex-column">
+        <h1>Javascript projects</h1>
+        <div class="divider"></div>
+        <div class="gallery-container">
+            <div style="text-align:center">
+                <span class="tab" onclick="currentSlide(1)">Snowfall</span>
+                <span class="tab" onclick="currentSlide(2)">Calculator</span>
+                <span class="tab" onclick="currentSlide(3)">Password generator</span>
+            </div>
+
+            <div class="galleryTabs fade">
+                <div class="divider"></div>
+                <p class="flex-row">❄ click the cloud to start or stop the snowfall ❄</p>
+                <div class="gallery flex-row">
+                    <div class="snowfall flex-row">
+                        <div class="cloud">
+                            <img src="./img/cloud.png" alt="">
+                            <button class="snow-btn">LET IT SNOW!</button>
+                        </div>
+                        <!-- <div class="snowflake">
+                            <img src="./img/snowflake1.png" alt="">
+                        </div> -->
+                        <div class="snow">
+                            <img src="./img/snow.png" alt="">
+                        </div>
+                        <!-- <div class="snowflake">❄</div> -->
+                    </div>
+                </div>
+            </div>
+        
+            <div class="galleryTabs fade">
+                <div class="divider"></div>
+                <div class="gallery flex-row">
+                    <div class="calculator">
+                        <div class="result-wrap"><div class="result">0</div></div>
+                        <div class="delete-buttons">
+                            <button class="delete-all">clear</button>
+                            <button class="delete-last"><-</button>
+                        </div>
+                        <div class="buttons">
+                            <div class="last-row">
+                                <button class="operation-decimal">.</button>
+                                <button>0</button>
+                                <button class="operation-result">=</button>
+                                <button class="operation-plus">+</button>
+                            </div>
+                            <div class="first-row">
+                                <button>1</button>
+                                <button>2</button>
+                                <button>3</button>
+                                <button class="operation-minus">-</button>
+                            </div>
+                            <div class="second-row">
+                                <button>4</button>
+                                <button>5</button>
+                                <button>6</button>
+                                <button class="operation-multiply">*</button>
+                            </div>
+                            <div class="third-row">
+                                <button>7</button>
+                                <button>8</button>
+                                <button>9</button>
+                                <button class="operation-divide">/</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="galleryTabs fade">
+                <div class="divider"></div>
+                <div class="gallery flex-row">
+                    <div class="passwords-generator flex-row">
+                        <div class="password-container flex-row"> <div class="password flex-row"></div> </div>
+                        <div class="params flex-row">
+                            <div class="text param">Password length:</div>
+                            <div class="length param flex-row">
+                                <input type="number" min="3" max="20" step="1" value="6" class="length-value">
+                                <input type="range" min="3" max="20" step="1" value="6" class="length-range">
+                            </div>
+                            <div class="checkbox param">
+                                <div class="param">
+                                    <input type="checkbox" id="number" class="checkbox-input numbers">
+                                    <label for="number" class="checkbox-label text">Numbers</label>
+                                </div>
+                                <div class="param">
+                                    <input type="checkbox" id="symbol" class="checkbox-input symbols">
+                                    <label for="symbol" class="checkbox-label text">Special characters</label>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="flex-row stretch">
+                            <button class="btn">Create password</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    <div class="green-line on-bottom"></div>
+
+    <script src="tabs.js"></script>
+    <script src="snow.js"></script>
+    <script src="calc.js"></script>
+    <script src="passwords-generator.js"></script>
+</body>
+</html>

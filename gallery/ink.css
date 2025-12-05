@@ -1,0 +1,214 @@
+:root {
+  --lime-green: rgb(200, 216, 54);
+  --light-gray: rgb(224, 224, 224);
+}
+
+*{
+    margin: 0;   
+    font-family: sen, sans-serif;
+}
+
+body {
+    font-size: 15px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: 50px; 
+}
+
+.gallery {
+    max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    justify-content: center;
+}
+  
+  /* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 20%;
+    padding: 0 10px;
+}
+  
+.column img {
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 250px;
+    cursor: pointer;
+    border: 1px var(--lime-green) solid;
+}
+
+.column img:hover {
+    opacity: 0.7;
+}
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 250px;
+    }
+}
+  
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 250px;
+    }
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--light-gray);
+    background-color: rgba(236, 236, 236, 0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    object-fit: contain;
+    
+}
+
+.modal-content img {
+    transition: 0.6s ease;
+}
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #0f0f0f;
+    padding: 10px 0;
+    height: 150px;
+}
+  
+  /* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+  
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #0f0f0f;
+    font-size: 80px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--lime-green);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.prev, .next {
+    color: #0f0f0f;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.prev {
+    margin-left: 45px;
+
+}
+
+.next {
+    margin-right: 45px;
+}
+
+.prev:hover, .next:hover,
+.prev:focus, .next:focus {
+    color: var(--lime-green);
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+
+
+.green-line {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: var(--lime-green);
+}
+
+.on-top {
+    position: sticky;
+    top: 0px;
+    z-index: 1001;
+}
+
+.on-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+.divider-30 {
+    margin-top: 30px;
+}
+
+/* .fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} */

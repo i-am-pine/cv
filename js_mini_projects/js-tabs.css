@@ -1,0 +1,443 @@
+:root {
+  --lime-green: rgb(200, 216, 54);
+  --light-gray: rgb(224, 224, 224);
+}
+
+*{
+    margin: 0;  
+}
+
+body {
+    font-family: sen, sans-serif;
+    font-size: 15px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    margin-top: 30px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.container {
+    margin-top: 50px; 
+}
+
+.gallery-container {
+    position: relative;
+    margin: auto;
+}
+
+.galleryTabs {
+    display: none;
+}
+
+/* .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+} */
+
+.tab {
+    cursor: pointer;
+    margin: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+
+.active, .tab:hover {
+    background-color: rgb(200, 216, 54);
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 700px){
+    .tab {
+      display: block;
+      text-align: left;
+    }
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.gallery {
+    max-width: 1200px;
+}
+
+/* Snow styles */
+
+.snowfall {
+    margin-top: 20px; 
+    position:relative;
+    color: white;
+    background-color: #5a5a72;
+    /* padding: 40px 50px; */
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.1), -5px 5px 15px rgba(0,0,0,0.1);
+    width: 400px;
+    max-height: 100vh;
+    height: 570px;
+}
+
+.cloud {
+    position:absolute;
+    top: -5%;
+    right: 25%;
+    width: 50%;
+}
+
+.cloud img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.cloud button {
+    font-family: 'Sen', sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    background-color:none;
+    background: none;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color:#5a5a72;
+    cursor: pointer;
+    width: 150px;
+}
+.cloud button:hover {
+    color: rgb(200, 216, 54);
+}
+
+.snow {
+    position: absolute;
+    bottom: -5px;
+    width: 100%; /*this for growth*/
+}
+.snow img {
+    width: 100%;
+    border-radius: 10px;
+    height: 90px; /*this for growth*/
+    object-fit: fill; /*this for growth*/
+}
+
+.snowflake {
+    position:absolute;
+    top:20%;
+    left:50%;
+    width:20px;
+    height: 20px;
+    /* animation: fall 2s linear forwards; */
+    /* transform: rotate(0deg);  */
+    /* color:aqua;
+    font-size: 50px; */
+}
+
+.snowflake img {
+    width: 100%;
+}
+
+/* @keyframes fall {
+    to {
+        top: 100%;
+        /* left: 0%; */
+        /* transform: rotate(180deg);
+    }
+} */
+
+  
+/* calculator styles */
+
+.calculator {
+    margin-top: 20px; 
+    background-color: rgb(200, 216, 54);
+    font-size: 30px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.1), -5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.result-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+}
+
+.result {
+    background-color: white;
+    text-align: right;
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 2px 3px 5px rgba(0, 0, 0, 0.3), 1px 1px 5px rgba(255, 255, 255, 0.1);
+    /* border: #5a5a72 2px solid; */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.calculator button {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #5a5a72;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 0;
+    border: none;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+    transition: .3s;
+}
+
+.calculator button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black
+}
+
+.calculator .delete-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 10px;
+}
+
+.calculator .delete-all, .calculator .delete-last {
+    width: 100%;
+}
+
+
+/* password generator styles */
+
+.passwords-generator {
+    /* background-color: rgb(200, 216, 54); */
+    margin-top: 20px; 
+    color: white;
+    background-color: #5a5a72;
+    padding: 40px 50px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px rgba(0,0,0,0.1), -5px 5px 15px rgba(0,0,0,0.1);
+    min-width: 226px;
+}
+
+.password-container{
+    font-size: 18px;
+    width: 100%;
+    justify-content: stretch;
+}
+
+.password {
+    /* background-color: #fff; 
+    color: black; */
+    /* background-color:rgb(200, 216, 54); */
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: white solid 1px; 
+    min-height: 25px;
+    /* height: 43px; 
+    padding: 10px;
+    border-radius: 25px; */
+}
+
+.params {
+    justify-content: left;
+    margin-top: 10px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.param {
+    /* padding: 5px; */
+    padding-top: 10px;
+    width: 100%;
+}
+
+.length {
+    justify-content: space-between;
+}
+
+.text {
+    color: white;
+    width: 100%;    
+}
+
+.length-value {
+    font-size: 18px;
+    width: 50px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #5a5a72;
+    outline: none; 
+    margin-right: 15px;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-inner-spin-button, 
+input::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+    -webkit-appearance: none;
+}
+
+.length-range {
+    -webkit-appearance: none;
+    border-radius: 3px;
+    height: 6px;
+    background-color: rgb(200, 216, 54);
+    outline: none; 
+}
+
+
+.length-range::-webkit-slider-thumb {
+    height: 30px;
+    width: 30px;
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: rgb(200, 216, 54);
+    border: 3px solid rgb(200, 216, 54);
+    color:aqua;
+    outline: none; 
+}
+
+.checkbox {
+    padding-top: 10px;
+    padding-left: 0px;
+}
+
+.checkbox-input {
+    /* position: absolute; */
+    /* */
+    width: 12px;
+    height: 12px; 
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: white;
+    padding-left: 0px;
+    accent-color: rgb(200, 216, 54);
+    outline: none;
+    border: none;
+}
+
+.checkbox-input:checked{
+    background-color: rgb(200, 216, 54);
+    /* width: 20px;
+    height: 20px; */
+    clip-path: polygon(0% 20%,20% 0%, 50% 50%, 80% 0%, 100% 20%, 50% 100%, 0% 20%);
+    /* polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%); */
+}
+
+.checkbox-label {
+    padding-left: 5px;
+    /* display: block; */
+    cursor: pointer;
+    user-select: none;
+}
+
+.passwords-generator button {
+    /* font-weight: bold; */
+    font-size: 18px;
+    background-color: rgb(200, 216, 54);
+    color: white;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 30px;
+    border: none;
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+    transition: .3s;
+    cursor: pointer;
+    /* height: 43px;  */
+}
+
+.stretch {
+    width: 100%;
+    justify-content: stretch;
+}
+
+.passwords-generator button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black
+}
+
+.passwords-generator button:hover {
+    background-color: black;
+    color: white
+}
+
+.green-line {
+    width: 100%;
+    height: 3px;
+    display: block;
+    background-color: var(--lime-green);
+}
+
+.on-top {
+    position: sticky;
+    top: 0px;
+    z-index: 1001;
+}
+
+.on-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1001;
+}
