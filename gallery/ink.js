@@ -13,7 +13,6 @@ for (let column of columns) {
     let length = column.getElementsByTagName("img").length;
     if (max<length){ max= length};
 }
-// console.log(max)
 
 for (let i =0; i<max; i++){
     for (let imgs of column_imgs){
@@ -55,18 +54,6 @@ for (let i=0; i<imgs_count; i++){
         captionText.innerHTML = this.src.split('/').slice(-1)[0].split('.')[0].replaceAll('_',' ').split(' ').slice(1).join(' ');
     }
 }
-
-// for (let img of imgs){
-//     // console.log(img)
-//     img.onclick = function(){
-//         modal.style.display = "block";
-//         modalImg.src = this.src;
-//         // console.log(this.src.split('/').slice(-1)[0].split('.')[0].replaceAll('_',' ').split(' ').slice(1).join(' '))
-//         // console.log(this.src.split('/').slice(-1)[0].split('.')[0].replace('_', ' '))
-//         captionText.innerHTML = this.src.split('/').slice(-1)[0].split('.')[0].replaceAll('_', ' ');
-//     }
-// }
-
 
 let span = document.getElementsByClassName("close")[0];
 

@@ -21,7 +21,6 @@ const fallingSnowflake = () => {
             endPosition-=5;
         }
 
-
         snowflake.classList.add('snowflake');
         snowflake.style.left = (startPosition)+'%';
         snowflake.style.width = (10+Math.random()*15)+'px';
@@ -69,19 +68,16 @@ const fallingSnowflake = () => {
     }
 }
 
-// function stopSnowfall() {
-    
-// }
+
 
 [button, cloud].forEach(item => 
 {
-    console.log(item);
-    console.log(window.getComputedStyle(snow).height);
+    // console.log(item);
+    // console.log(window.getComputedStyle(snow).height);
 
     item.addEventListener('click', () => 
     {
         if (button.textContent.includes('STOP')) {
-            // stopSnowfall();
             clearInterval(interval);
             button.textContent = 'LET IT SNOW!'
 

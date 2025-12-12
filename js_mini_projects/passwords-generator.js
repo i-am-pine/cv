@@ -28,8 +28,7 @@ createPasswordButton.addEventListener('click', ()=>{
     let letters='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
         numbers='0123456789',
         characters='_=!@#$%^&*()',
-        password='';
-        
+        password='';        
     
     if (numbersCheckbox.checked) {
         letters+=numbers;
@@ -37,7 +36,7 @@ createPasswordButton.addEventListener('click', ()=>{
     if (symbolsCheckbox.checked) {
         letters+=characters;
     }
-    console.log(letters);
+
     length=letters.length;
 
     for (let i=0; i<lengthValue.value; i++) {
@@ -52,13 +51,21 @@ createPasswordButton.addEventListener('click', ()=>{
     
     if (symbolsCheckbox.checked && notIncludes(password, characters)) {
         if (numbersCheckbox.checked && numberIndex>0) {
-            characterIndex = Math.floor(Math.random()*(password.length-1));
-            if (characterIndex>=numberIndex) {
-                characterIndex++;
+            characterIndex = Math.floor(Math.random()*(password.length));
+            if (numbers.includes(password[characterIndex])) {
+                if (characterIndex!=0) {
+                    characterIndex--
+                }
+                else {
+                    characterIndex++
+                }
             }
+            // if (characterIndex>=numberIndex) {
+            //     characterIndex++;
+            // }
         }
         else {
-            characterIndex = Math.floor(Math.random()*(password.length-1));
+            characterIndex = Math.floor(Math.random()*(password.length));
         }
         password = replaceChar(password, characters[Math.floor(Math.random()*characters.length)], characterIndex);
     }

@@ -60,10 +60,9 @@ function countResult(){
 
 function mainCalcFunction(event){
     if (event.target.tagName!='BUTTON') return;
-    //result.textContent = '';
 
     const value = event.target.textContent;
-    console.log(value)
+    // console.log(value)
     if (numbers.includes(value)){
         if (operation === '' && secondNumber === ''){
             firstNumber += value;
@@ -73,7 +72,7 @@ function mainCalcFunction(event){
             secondNumber += value;
             result.textContent = secondNumber;
         }
-        console.log('1===', value, firstNumber, secondNumber, operation)
+        // console.log('1===', value, firstNumber, secondNumber, operation)
         return;
     }
     if (operations.includes(value) && firstNumber!==''){
@@ -82,43 +81,16 @@ function mainCalcFunction(event){
         }
         operation = value;
         result.textContent = operation;
-        console.log('2===', value, firstNumber, secondNumber, operation)
+        // console.log('2===', value, firstNumber, secondNumber, operation)
 
         return;
     }
 
     if (value==='='){
         countResult()
-        // switch (operation) {
-        //     case '+':
-        //         firstNumber = ((+firstNumber)+(+secondNumber)).toString();
-        //         break;
-        //     case '-':
-        //         firstNumber = ((+firstNumber)-(+secondNumber)).toString();
-        //         break;
-        //     case '*':
-        //         firstNumber = ((+firstNumber)*(+secondNumber)).toString();
-        //         break;
-        //     case '/':
-        //         if (+secondNumber!=0){
-        //             firstNumber = ((+firstNumber)/(+secondNumber)).toString();
-        //             break;
-        //         }
-        //         else{ 
-        //             result.textContent = 'ERROR';
-        //             firstNumber = '';
-        //             secondNumber = '';
-        //             operation = '';
-        //             return;
-        //         }
-        // }
-        // result.textContent = firstNumber;
-        // secondNumber = '';
-        // operation = '';
     }
-    console.log('4===', value, firstNumber, secondNumber, operation)
+    // console.log('4===', value, firstNumber, secondNumber, operation)
 
-//    console.log(firstNumber, secondNumber, operation)
 }
 
 document.querySelector('.delete-all').addEventListener('click', deleteAll);

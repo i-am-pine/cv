@@ -1,12 +1,6 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// // Next/previous controls
-// function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
-
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
@@ -100,24 +94,8 @@ for (let tab = 1; tab<imgs_ordered.length; tab++){
     }
 }
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-// var imgs = gallery.getElementsByTagName("img");
-// // console.log(imgs)
-// for (let img of imgs){
-//     // console.log(img)
-//     img.onclick = function(){
-//         modal.style.display = "block";
-//         modalImg.src = this.src;
-//         // console.log(this.src)
-//         // console.log(this.src.split('/').slice(-1)[0].split('.jpg')[0].replaceAll('_', ' '))
-//         captionText.innerHTML = this.src.split('/').slice(-1)[0].split('.jpg')[0].replaceAll('_', ' ');
-//     }
-// }
-
-
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = 'none';
 }
