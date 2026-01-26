@@ -52,6 +52,9 @@ html {
     color: var(--lime-green-darker);
 }
 
+.black {
+    color: black;
+}
 /* h2.green{
     color: var(--lime-green);
 } */
@@ -193,6 +196,7 @@ a:hover, a:active {
     color: var(--light-gray);
     background-color: transparent;
 }
+
 
 h2 {
     font-size: 48px;
