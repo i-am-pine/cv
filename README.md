@@ -1,4 +1,4 @@
-This is my online CV, designed to showcase my knowledge of HTML/CSS/JavaScript.  
+This is my online CV, made to show my knowledge of HTML/CSS/JavaScript.  
 [Available online by this link](https://i-am-pine.github.io/cv/cv-en.html)
 
 ### Pages in the project:
